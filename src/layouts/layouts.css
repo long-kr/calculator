@@ -1,0 +1,16 @@
+.display {
+    width: 30%;
+    margin: 10px auto;
+    border: 3px;
+    border-style: groove;
+}
+
+.buttons-box {
+    width: 30%;
+    margin: 10px auto;
+    border: 3px;
+    border-style: groove;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,11 +1,10 @@
-import "./display.css";
+import "./layouts.css"
 
 interface Props {
     cal: {
-        number1?: number;
-        number2?: number;
+        num?: string;
         result?: number;
-        operator?: null |"+" | "-" | "*" | "/";
+        sign?: null |"+" | "-" | "*" | "/" | "%" ;
     };
 }
 
@@ -14,11 +13,9 @@ export default function Display({ cal }: Props) {
     return (
         <div className="display">
             { !cal.result &&
-                <h1>
-                numbers: 
-                    {cal.number1 ? cal.number1: ""} 
-                    {cal.operator ? cal.operator: ""} 
-                    {cal.number2 ? cal.number2 : ""} 
+                <h1> numbers: 
+                    {cal.num ? cal.num: ""} 
+                    {cal.sign ? cal.sign: ""} 
                 </h1>
             }
             {   cal.result &&

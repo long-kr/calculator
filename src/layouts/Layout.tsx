@@ -1,11 +1,12 @@
+import "./layouts.css";
 import { useState } from "react";
 import Buttons from "../buttons/Buttons";
 import Display from "./Display";
 
-interface Cal {
-    num?: number;
+interface ICal {
+    num?: string;
     result?: number;
-    sign?: null |"+" | "-" | "*" | "/";
+    sign?: null |"+" | "-" | "*" | "/" | "%" ;
 }
 
 const btnValues = [
@@ -16,19 +17,26 @@ const btnValues = [
     [0, ".", "="],
   ];
 
-export default function Layout () {
+export default function Layout() {
 
-    const [cal, setCal] = useState<Cal>({});
+    const [cal, setCal] = useState<ICal>({});
 
-    const numberClickHandler = (e: any) => {
+    const numberClickHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
-        console.log(e.target.innerHTML)
+        const value = e.target.innerHTML;
+        
+        if (cal.num && cal.num.length < 16) {
+            setCal((pre: ICal) => (
+                ...pre,
+                num: value;
+            ))
+        }
     }
 
     return (
         <div className="calculator">
             <Display cal={cal} />
-            <div className="button-box"> 
+            <div className="buttons-box"> 
                 {   btnValues.flat().map((value, i) => (
                         <Buttons 
                             key={i}
