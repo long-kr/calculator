@@ -2,7 +2,7 @@ import "./buttons.css"
 
 interface Props {
     value: string | number;
-    clickHandler: (e: React.ChangeEvent<HTMLInputElement>) => void
+    clickHandler: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export default function Buttons ({ value, clickHandler }: Props) {

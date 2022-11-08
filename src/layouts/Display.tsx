@@ -2,9 +2,9 @@ import "./layouts.css"
 
 interface Props {
     cal: {
-        num?: string;
-        result?: number;
-        sign?: null |"+" | "-" | "*" | "/" | "%" ;
+        num: number;
+        result: number;
+        sign: null |"+" | "-" | "*" | "/" | "%" ;
     };
 }
 

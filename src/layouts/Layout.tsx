@@ -2,9 +2,10 @@ import "./layouts.css";
 import { useState } from "react";
 import Buttons from "../buttons/Buttons";
 import Display from "./Display";
+import ButtonBox from "../buttons/ButtonBox";
 
 interface ICal {
-    num: string;
+    num: number;
     result: number;
     sign: null |"+" | "-" | "*" | "/" | "%" ;
 }
@@ -19,24 +20,28 @@ const btnValues = [
 
 export default function Layout() {
 
-    const [cal, setCal] = useState<ICal>({} as ICal);
+    const [cal, setCal] = useState<ICal>({
+        sign: null,
+        num: 0,
+        result: 0
+    });
 
-    const numberClickHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const numberClickHandler = (e: React.MouseEvent<HTMLButtonElement>): void => {
         e.preventDefault()
-        const value = e.target.innerHTML;
-        
-        if (cal.num && cal.num.length < 16) {
-            setCal((pre: ICal) => ({
-                ...pre,
-                num: value
-            }))
-        }
+        const value = Number((e.target as Element).innerHTML);
+
+        setCal((pre: ICal) => ({
+            ...pre,
+            num: value
+        }))
+
+        console.log(cal.num);
     }
 
     return (
         <div className="calculator">
             <Display cal={cal} />
-            <ButtonBox className="buttons-box"> 
+            <ButtonBox> 
                 {   btnValues.flat().map((value, i) => (
                         <Buttons 
                             key={i}
