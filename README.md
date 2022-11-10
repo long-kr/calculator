@@ -4,9 +4,9 @@ Practice building simple calculator with React/Typescript
 
 Live: https://calculator-lilac-three.vercel.app/
 
-Calculator instructor: https://www.sitepoint.com/react-tutorial-build-calculator-app/
+Credit: https://www.sitepoint.com/
 
-CSS source: https://codepen.io/magnificode/pen/eZOLpa
+CSS credit: https://www.makeuseof.com/
 
 
 Hi, this is my practice build calculator with react and typescript. I basically follow someone's idea so I can apply typescripts easier.
