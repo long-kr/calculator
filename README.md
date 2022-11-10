@@ -1,4 +1,4 @@
-# Getting Started with Calculator
+# Calculator
 
 Practice building simple calculator with React/Typescript
 
