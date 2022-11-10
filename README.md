@@ -9,7 +9,7 @@ Credit: https://www.sitepoint.com/
 CSS credit: https://www.makeuseof.com/
 
 
-Hi, this is my practice build calculator with react and typescript. I basically follow someone's idea so I can apply typescripts easier.
+Hi, this is my practice build calculator with react and typescript. I have learnt a lot form `Sitepoint` and `makeuseof` for this project.
 
 ## Image:
 
