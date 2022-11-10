@@ -5,6 +5,6 @@ interface Props {
 export default function ButtonBox({ children }: Props) {
 
     return (
-        <div className="button-box">{children}</div>
+        <div className="calculator--functions">{children}</div>
     )
 }

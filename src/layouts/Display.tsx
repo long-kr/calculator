@@ -1,26 +1,13 @@
-import "./layouts.css"
-
 interface Props {
-    cal: {
-        num: number;
-        result: number;
-        sign: null |"+" | "-" | "*" | "/" | "%" ;
-    };
+    value: string | number
 }
 
-export default function Display({ cal }: Props) {
+//Layout.tsx
+export default function Display({ value }: Props) {
 
     return (
-        <div className="display">
-            { !cal.result &&
-                <h1> numbers: 
-                    {cal.num ? cal.num: ""} 
-                    {cal.sign ? cal.sign: ""} 
-                </h1>
-            }
-            {   cal.result &&
-                <h1>result: {cal.result}</h1>
-            }
+        <div className="calculator--display">
+            {value}
         </div>
     )
 }
